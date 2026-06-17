@@ -1,0 +1,31 @@
+{
+    "camera_location": "Building A - Floor 3 - Room 301",
+    "cooldown_seconds": 60,
+    "detection_threshold": 0.5,
+    "min_consecutive_frames": 3,
+    "email": {
+        "enabled": true,
+        "smtp_server": "smtp.gmail.com",
+        "smtp_port": 587,
+        "from_address": "parthasarathyg693@gmail.com",
+        "username": "parthasarathyg693@gmail.com",
+        "password": "dbvtzpnbnmybjjyf",
+        "recipients": [
+            "parthasarathyg692@gmail.com",
+            "parthasarathyg694@gmail.com",
+            "parthasarathyg695@gmail.com"
+        ]
+    },
+    "sms": {
+        "enabled": false,
+        "twilio_account_sid": "",
+        "twilio_auth_token": "",
+        "from_number": "",
+        "to_numbers": []
+    },
+    "dashboard": {
+        "enabled": false,
+        "webhook_url": "",
+        "api_key": ""
+    }
+}

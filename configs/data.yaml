@@ -1,0 +1,14 @@
+# Dataset configuration for YOLO training
+path: ../data/splits
+train: train/images
+val: val/images
+test: test/images
+
+# Number of classes
+nc: 3
+
+# Class names
+names:
+  0: fire
+  1: smoke
+  2: fire_mimic

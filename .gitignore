@@ -1,0 +1,70 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.venv/
+.venv310/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Model checkpoints (large files)
+models/checkpoints/*.pth
+models/yolo/*.pt
+*.onnx
+
+# Data (too large for git)
+data/raw/*
+data/processed/*
+data/splits/*
+!data/**/.gitkeep
+
+# Alerts evidence
+alerts/*.jpg
+alerts/logs/
+
+# Logs
+*.log
+wandb/
+
+# Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime files
+temp_alerts/
+debug_frame_*.jpg
+diagnose_results.txt
+
+# Next.js cache
+*.tsbuildinfo
+
+models/yolo/

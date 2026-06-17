@@ -1,0 +1,59 @@
+model:
+  yolo:
+    variant: "models/yolo/weights/best.pt"  # Using user-provided local weights
+    pretrained: false
+    img_size: 640
+
+# Notification configuration
+notification:
+  # Email settings (Gmail recommended)
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  sender_email: "parthasarathyg693@gmail.com" 
+  sender_password: "dbvtzpnbnmybjjyf"
+  receiver_emails: "parthasarathyg692@gmail.com,parthasarathyg694@gmail.com,parthasarathyg695@gmail.com"
+  
+  # SMS settings (Twilio)
+  twilio_account_sid: "your_twilio_account_sid"  # REPLACE WITH TWILIO ACCOUNT SID
+  twilio_auth_token: "your_twilio_auth_token"    # REPLACE WITH TWILIO AUTH TOKEN
+  twilio_phone_number: "+1234567890"            # REPLACE WITH YOUR TWILIO PHONE NUMBER
+  receiver_phone_numbers: "+1234567890,+0987654321"  # REPLACE WITH RECEIVER PHONE NUMBERS
+  
+  # Alert cooldown (prevents spam)
+  cooldown_seconds: 300  # 5 minutes between alerts
+
+# Training configuration
+training:
+  batch_size: 8
+  epochs: 50
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  patience: 15
+  warmup_epochs: 5
+  gradient_clip: 1.0
+  
+  # Focal Loss settings
+  use_focal_loss: true
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  
+  # Weighted sampling
+  use_weighted_sampling: true
+  
+  # Data augmentation
+  augmentation:
+    hsv_h: 0.015
+    hsv_s: 0.7
+    hsv_v: 0.4
+    degrees: 10
+    translate: 0.1
+    scale: 0.5
+    flipud: 0.5
+    mosaic: 1.0
+
+# Inference configuration
+inference:
+  device: "cuda"
+  batch_size: 1
+  confidence_threshold: 0.25  # Raised to reduce false positives
+  nms_threshold: 0.45

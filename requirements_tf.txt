@@ -1,0 +1,9 @@
+tensorflow
+opencv-python-headless
+fastapi
+uvicorn
+python-multipart
+numpy
+pillow
+psycopg2-binary
+websockets
